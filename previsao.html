@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Previsão do Tempo - Alerta Clima RS</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Logo Alerta Clima RS</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="previsao.html" class="active">Previsão</a></li>
+        <li><a href="guaiba.html">Guaíba</a></li>
+        <li><a href="noticias.html">Notícias</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Previsão do Tempo</h1>
+    <p>Confira abaixo a previsão atualizada para a sua cidade.</p>
+
+    <div class="weather-box">
+      <label for="city">Digite a cidade:</label>
+      <input type="text" id="city" placeholder="Ex: Porto Alegre">
+      <button onclick="buscarPrevisao()">Buscar</button>
+
+      <div id="resultadoPrevisao" class="weather-result">
+        <!-- Os dados da API vão aparecer aqui -->
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    Projeto Técnico - Alerta Clima RS 2025 | Desenvolvido por Ramiro, Rodrigo e Raphael
+  </footer>
+
+  <script src="previsao.js"></script>
+</body>
+</html>
