@@ -179,5 +179,82 @@
     margin-top: 20px;
     font-size: 18px;
   }
+/* Fundo mais clean e moderno */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to bottom, #eaf4fc, #cfe8ff);
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+/* Centraliza o conteúdo da previsão */
+.weather-box {
+  background-color: #ffffff;
+  padding: 30px;
+  margin-top: 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Campo de input estilizado */
+.weather-box input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 250px;
+  font-size: 16px;
+}
+
+/* Botão com hover suave */
+.weather-box button {
+  padding: 12px 24px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.weather-box button:hover {
+  background-color: #0056b3;
+}
+
+/* Resultado da previsão com destaque */
+.weather-result {
+  margin-top: 30px;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.weather-result h3 {
+  font-size: 26px;
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+/* Responsivo para celular */
+@media (max-width: 600px) {
+  .weather-box input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .weather-box button {
+    width: 100%;
+  }
+}
+.weather-result img {
+  width: 100px;
+  height: 100px;
+  margin: 10px 0;
+}
+
   
   
