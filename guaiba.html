@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nível do Guaíba - Alerta Clima RS</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="logo.png" alt="Logo Alerta Clima RS">
+      </div>
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="previsao.html">Previsão</a></li>
+          <li><a href="guaiba.html" class="active">Guaíba</a></li>
+          <li><a href="noticias.html">Notícias</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Nível do Rio Guaíba</h1>
+    <p>Acompanhe aqui o monitoramento diário do nível do Guaíba em Porto Alegre.</p>
+
+    <div class="grafico-container">
+      <canvas id="graficoGuaiba"></canvas>
+    </div>
+  </main>
+
+  <footer>
+    Projeto Técnico - Alerta Clima RS 2025 | Desenvolvido por Ramiro Rockenbach, Rodrigo Leonardis, Raphael Plump
+  </footer>
+
+  <script src="guaiba.js"></script>
+</body>
+</html>
