@@ -38,11 +38,8 @@ header {
 }
 
 .logo img {
-  width: 180px; 
-  height: auto;
-  position: relative;
-  right: 525px;
-  top: 20px; 
+  width: 500px; 
+  height: auto; 
 }
 
 
@@ -78,7 +75,7 @@ header {
 
 /* === BANNER === */
 .banner {
-  margin-top: 20px;
+  margin-top: -20px;
   display: flex;
   justify-content: center;
 }
@@ -411,6 +408,63 @@ main {
   border-radius: 12px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
 }
+
+.carousel {
+  position: relative;
+  width: 100%;
+  max-height: 400px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 20px auto;
+}
+
+.slides {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+
+.slides img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slides img.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.carousel button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  font-size: 30px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.carousel .prev {
+  left: 20px;
+}
+
+.carousel .next {
+  right: 20px;
+}
+
+.carousel button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
 
 
 
