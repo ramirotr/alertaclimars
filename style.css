@@ -23,11 +23,10 @@ body {
 /* === HEADER === */
 header {
   background-color: #003366;
-  padding: 20px 0;
+  padding: 20px;
 }
 
 .header-container {
-  .header-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
@@ -36,17 +35,16 @@ header {
     align-items: center;
     text-align: center;
     gap: 10px;
-  }  
 }
 
-.logo {
-  .logo {
-    font-weight: bold;
-    font-size: 22px;
-    color: white;
-  }
-  
+.logo img {
+  width: 180px; 
+  height: auto;
+  position: relative;
+  right: 525px;
+  top: 20px; 
 }
+
 
 .menu {
   list-style: none;
