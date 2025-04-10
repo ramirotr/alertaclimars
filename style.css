@@ -463,6 +463,156 @@ main {
 .carousel button:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
+/* === MENU DE CONFIGURAÇÕES === */
+.config-menu {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
+#config-btn {
+  font-size: 28px;     /* aumenta o tamanho do ícone */
+  padding: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;         /* cor do ícone no header escuro */
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+#config-btn:hover {
+  opacity: 0.8;
+}
+
+.large-font #config-btn {
+  font-size: 1.5em !important; /* ou ajuste para o tamanho ideal */
+}
+
+
+.config-panel {
+  position: absolute;
+  top: 55px; /* Aumenta para descer o menu */
+  right: 20px;
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: none;
+  z-index: 10;
+  min-width: 160px;
+}
+
+.large-font .config-panel {
+  top: 65px; /* Quando o texto maior estiver ativo, desce um pouco mais */
+}
+
+
+
+.config-panel label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Corrige fundo e borda do botão de configurações no modo escuro */
+.dark-mode #config-btn {
+  background-color: transparent !important;
+  border: none;
+  outline: none;
+}
+
+
+/* Modo escuro */
+.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+.dark-mode header,
+.dark-mode footer {
+  background-color: #222;
+  border-color: #444;
+}
+
+.dark-mode .card,
+.dark-mode .weather-box,
+.dark-mode .grafico-container,
+.dark-mode .news-card,
+.dark-mode .noticia-card {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+}
+
+.dark-mode .config-panel {
+  background-color: #f9f9f9;
+  color: #222;
+}
+
+.dark-mode .config-panel label {
+  color: #222;
+}
+
+.dark-mode #config-btn {
+  background-color: #555;
+}
+.dark-mode .config-panel {
+  background-color: #1f1f1f;
+  color: #fff;
+}
+
+.dark-mode .config-panel label {
+  color: #fff;
+}
+
+
+
+/* Acessibilidade */
+.high-contrast {
+  filter: contrast(1.5) brightness(1.2);
+}
+
+.large-font {
+  --base-font-size: 20px;
+  --heading-font-size: 3rem;
+  --subheading-font-size: 2.2rem;
+  --paragraph-line-height: 2em;
+}
+
+.large-font * {
+  font-size: var(--base-font-size) !important;
+  line-height: var(--paragraph-line-height) !important;
+}
+
+.large-font h1 {
+  font-size: var(--heading-font-size) !important;
+}
+
+.large-font h2 {
+  font-size: var(--subheading-font-size) !important;
+}
+
+.large-font h3 {
+  font-size: 1.7rem !important;
+}
+
+/* Transição suave entre temas */
+body,
+header,
+footer,
+.card,
+.config-panel,
+main,
+.banner,
+.news-card,
+.noticia-card,
+.grafico-container {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+
 
 
 
