@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nível do Guaíba - Alerta Clima RS</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="icon" type="image/x-icon" href="assets/realicon_alertaclimars-removebg-preview.png">
+</head>
+<body>
+
+  <div class="config-menu">
+    <button id="config-btn">⚙️</button>
+    <div class="config-panel" id="config-panel">
+      <label><input type="checkbox" id="toggle-dark-mode"> Modo Escuro</label>
+      <label><input type="checkbox" id="toggle-font"> Texto Maior</label>
+      <label><input type="checkbox" id="toggle-contrast"> Alto Contraste</label>
+    </div>
+  </div>
+  
+
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="assets/CLIMA__1_-removebg-preview (1).png" alt="Logo Alerta Clima RS">
+      </div>
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="previsao.html">Previsão</a></li>
+          <li><a href="guaiba.html" class="active">Guaíba</a></li>
+          <li><a href="noticias.html">Notícias</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Nível do Rio Guaíba</h1>
+    <p>Acompanhe aqui o monitoramento diário do nível do Guaíba em Porto Alegre.</p>
+    <div id="nivel-guaiba">Carregando nível do Guaíba.....</div>
+
+    <canvas id="grafico" width="600" height="300"></canvas>
+    <p id="erro" style="color: red;"></p>
+
+  </main>
+
+  <footer>
+    Projeto Técnico - Alerta Clima RS 2025 | Desenvolvido por Ramiro Rockenbach, Rodrigo Leonardis, Raphael Plump, Pedro Pruvinelli
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="guaiba.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+</html>
