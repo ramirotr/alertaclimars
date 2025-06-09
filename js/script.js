@@ -1,5 +1,4 @@
 window.addEventListener("load", () => {
-  // === CARROSSEL DE IMAGENS ===
   const slides = document.querySelectorAll(".slides img");
   const prevBtn = document.querySelector(".prev");
   const nextBtn = document.querySelector(".next");
