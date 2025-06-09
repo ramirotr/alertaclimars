@@ -28,7 +28,7 @@
           <li><a href="index.html">Início</a></li>
           <li><a href="previsao.html">Previsão</a></li>
           <li><a href="guaiba.html">Guaíba</a></li>
-          <li><a href="noticias.html" class="active">Notícias</a></li>
+          <li><a href="noticias.php" class="active">Notícias</a></li>
         </ul>
       </nav>
     </div>
