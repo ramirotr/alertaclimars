@@ -43,35 +43,93 @@ header {
 }
 
 
-.menu {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  padding: 0;
-  margin: 0;
-  flex-wrap: wrap;
+@import url(https://fonts.googleapis.com/css?family=Montserrat:300&subset=latin-ext);
+
+body {
+-moz-osx-font-smoothing:grayscale;
+-ms-flex-direction:column;
+-webkit-box-direction:normal;
+-webkit-box-orient:vertical;
+-webkit-font-smoothing:antialiased;
+background:#f5f5f5;
+color:#777;
+display:flex;
+flex-direction:column;
+font-family:Montserrat, sans-serif;
+font-size: 1em;
+font-weight:300;
+margin:0;
+min-height:100vh;
+
 }
 
-.menu li a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 16px;
-  transition: color 0.3s ease;
+h1 {
+	font-weight: 200;
+	font-size: 2.2rem;
+	color: #222;
+	text-align: center;
 }
 
-.menu li a:hover,
-.menu li a.active {
-  color: #ffcc00;
+nav {
+	margin: 5px;
+	max-width: 1900px;
+	background: #008FEA;
+	box-shadow:0 3px 15px rgba(0,0,0,.15);
+}
+
+nav::after {
+	display: block;
+	content: '';
+	clear: both;
+}
+
+nav ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+nav ul li {
+	float: left;
+	position: relative;
+}
+
+nav ul li a {
+	display: block;
+	color: rgba(255, 255, 255, .9);
+	text-decoration: none;
+	padding: 1rem 2rem;
+	border-top: 2px solid transparent;
+	border-bottom: 2px solid transparent;
+	transition: all .3s ease-in-out;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+	background: rgba(0, 0, 0, .15);
+}
+
+nav ul li a:focus {
+	color: white;
+}
+
+nav ul li ul li {
+	min-width: 190px;
+}
+
+nav ul li ul li a {
+	background: transparent;
+	color: #555;
+	border-bottom: 1px solid #DDE0E7;
+}
+
+nav ul li ul li a:hover,
+nav ul li ul li a:focus {
+	background: #eee;
+	color: #111;
 }
 
 
-.menu li a:hover,
-.menu li a.active {
-  color: #ffcc00;
-}
 
 /* === BANNER === */
 .banner {
