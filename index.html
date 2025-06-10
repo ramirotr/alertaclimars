@@ -11,21 +11,9 @@
 <body>
 
   <div class="config-menu">
-    <button id="config-btn">⚙️</button>
-    <div class="config-panel" id="config-panel">
-      <label>
-        <input type="checkbox" id="toggle-dark-mode">
-        Modo Escuro
-      </label>
-      <label>
-        <input type="checkbox" id="toggle-font">
-        Texto Maior
-      </label>
-      <label>
-        <input type="checkbox" id="toggle-contrast">
-        Alto Contraste
-      </label>
-    </div>
+    <button id="toggle-dark-mode" title="Modo Escuro" aria-label="Modo Escuro">🌙</button>
+    <button id="toggle-font" title="Texto Maior" aria-label="Texto Maior">🔠</button>
+    <button id="toggle-contrast" title="Alto Contraste" aria-label="Alto Contraste">⚡</button>
   </div>
   
   <header>
@@ -48,9 +36,8 @@
     <section class="banner">
       <div class="carousel">
         <div class="slides">
-          <img src="assets/portoalegre_banner.png" alt="Banner 1" class="active">
-          <img src="assets/novohamburgo_banner.png" alt="Banner 2">
-          <img src="assets/bentogoncalves_banner.png" alt="Banner 3">
+          <img src="assets/guaiba-img.jpg" alt="Banner 1" class="active">
+          <img src="assets/img 2.jpg" alt="Banner 2">
         </div>
         <button class="prev">&#10094;</button>
         <button class="next">&#10095;</button>
@@ -62,24 +49,24 @@
       <div class="card">
         <h2>🌤️ Previsão do Tempo 🌤️</h2>
         <p>Confira a previsão atualizada para sua cidade.</p>
-        <a class="btn" href="previsao.html">Ver mais</a>
+        <a class="btn btn-lite" href="previsao.html">Ver mais</a>
       </div>
       <div class="card">
         <h2>🌊 Nível do Guaíba 🌊</h2>
         <p>Acompanhe a elevação do rio e riscos de inundação.</p>
-        <a class="btn" href="guaiba.html">Ver mais</a>
+        <a class="btn btn-lite" href="guaiba.html">Ver mais</a>
       </div>
       <div class="card">
         <h2>📰 Notícias 📰</h2>
         <p>Veja as últimas atualizações sobre o mundo ao nosso redor.</p>
-        <a class="btn" href="noticias.html">Ver mais</a>
+        <a class="btn btn-lite" href="noticias.html">Ver mais</a>
       </div>
     </section>
   </main>
 
   <footer>
     <div class="container">
-      <p>Projeto Técnico - Alerta Clima RS 2025 | Desenvolvido por Ramiro Rockenbach, Rodrigo Leonardis, Raphael Plump, Pedro Pruvinelli </p>
+      <p>Projeto Técnico - Alerta Clima RS 2025 | Desenvolvido por Ramiro Rockenbach, Rodrigo Leonardis, Raphael Plump e Pedro Pruvinelli </p>
     </div>
    
   </footer>

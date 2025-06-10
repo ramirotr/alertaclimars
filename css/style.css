@@ -214,6 +214,20 @@ main p {
   background-color: #005fa3;
 }
 
+.btn-lite {
+  background: #f2f2f2;
+  color: #333;
+  border: 1px solid #ddd;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+}
+
+.btn-lite:hover,
+.btn-lite:focus {
+  background: #e0e0e0;
+  border: 1px solid #bbb;
+  color: #111;
+}
+
 /* === PREVISÃO DO TEMPO === */
 .weather-box {
   background-color: #ffffff;
@@ -523,10 +537,47 @@ main {
 }
 /* === MENU DE CONFIGURAÇÕES === */
 .config-menu {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  z-index: 10;
+  display: flex !important;
+  gap: 12px !important;
+  position: absolute !important;
+  top: 18px !important;
+  right: 24px !important;
+  z-index: 100 !important;
+}
+
+.config-menu button {
+  font-size: 1.7rem !important;
+  width: 40px !important;
+  height: 40px !important;
+  padding: 0 !important;
+  border: none !important;
+  background: #f0f0f0 !important;
+  border-radius: 50% !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08) !important;
+  cursor: pointer !important;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s !important;
+  outline: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.config-menu button:hover,
+.config-menu button:focus {
+  background: #e0e7ff !important;
+  transform: scale(1.12) !important;
+  box-shadow: 0 4px 16px rgba(60,60,180,0.12) !important;
+}
+
+body.dark-mode .config-menu button {
+  background: #23272f !important;
+  color: #fff !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25) !important;
+}
+
+body.dark-mode .config-menu button:hover,
+body.dark-mode .config-menu button:focus {
+  background: #374151 !important;
 }
 
 #config-btn {

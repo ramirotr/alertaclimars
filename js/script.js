@@ -72,18 +72,18 @@ window.addEventListener("load", () => {
     });
   }
 
-  toggleDark?.addEventListener("change", (e) => {
-    document.body.classList.toggle("dark-mode", e.target.checked);
-    localStorage.setItem("darkMode", e.target.checked);
+  // Dark mode
+  document.getElementById('toggle-dark-mode').addEventListener('click', function() {
+    document.body.classList.toggle('dark-mode');
   });
 
-  toggleFont?.addEventListener("change", (e) => {
-    document.documentElement.classList.toggle("large-font", e.target.checked);
-    localStorage.setItem("largeFont", e.target.checked);
+  // Font size
+  document.getElementById('toggle-font').addEventListener('click', function() {
+    document.body.classList.toggle('large-font');
   });
 
-  toggleContrast?.addEventListener("change", (e) => {
-    document.body.classList.toggle("high-contrast", e.target.checked);
-    localStorage.setItem("highContrast", e.target.checked);
+  // High contrast
+  document.getElementById('toggle-contrast').addEventListener('click', function() {
+    document.body.classList.toggle('high-contrast');
   });
 });
