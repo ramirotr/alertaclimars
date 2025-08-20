@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alerta Clima RS</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="logo alerta clima rs" href="assets/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="config-menu">
+    <button id="config-btn">⚙️</button>
+    <div class="config-panel" id="config-panel">
+      <label>
+        <input type="checkbox" id="toggle-dark-mode">
+        Modo Escuro
+      </label>
+      <label>
+        <input type="checkbox" id="toggle-font">
+        Texto Maior
+      </label>
+      <label>
+        <input type="checkbox" id="toggle-contrast">
+        Alto Contraste
+      </label>
+    </div>
+  </div>
+  
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <img src="assets/CLIMA__1_-removebg-preview (1).png" alt="Logo Alerta Clima RS">
+      </div>
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html" class="active">Início</a></li>
+          <li><a href="previsao.html">Previsão</a></li>
+          <li><a href="guaiba.html">Guaíba</a></li>
+          <li><a href="noticias.php">Notícias</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="banner">
+      <div class="carousel">
+        <div class="slides">
+          <img src="assets/BANNER1.png" alt="Banner 1" class="active">
+          <img src="assets/BANNER2.png" alt="Banner 2">
+          <img src="assets/BANNER3.png" alt="Banner 3">
+          <img src="assets/BANNER4.png" alt="Banner 4">
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+      </div>
+    </section>
+    
+
+    <section class="cards container">
+      <div class="card">
+        <h2>🌤️ Previsão do Tempo 🌤️</h2>
+        <p>Confira a temperatura, vento e umidade atual da sua cidade.</p>
+        <a class="btn" href="previsao.html">Ver mais</a>
+      </div>
+      <div class="card">
+        <h2>🌊 Nível do Guaíba 🌊</h2>
+        <p>Veja um gráfico com a média de altitude do rio Guaíba atualizado mensalmente. </p>
+        <a class="btn" href="guaiba.html">Ver mais</a>
+      </div>
+      <div class="card">
+        <h2>📰 Notícias 📰</h2>
+        <p>Veja notícias atualizadas sobre o mundo ao nosso redor.</p>
+        <a class="btn" href="noticias.php">Ver mais</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Projeto Técnico - Alerta Clima RS 2025 | Desenvolvido por <a class="githublink" href="https://github.com/pruvinelli123" target="_blank">Pedro Pruvinelli</a> , <a class="githublink" href="https://github.com/ramirotr" target="_blank">Ramiro Rockenbach</a> , <a class="githublink" href="https://github.com/rodrigin" target="_blank">Rodrigo Leonardis</a> e <a class="githublink" href="https://github.com/Plump07" target="_blank">Raphael Plump</a></p>
+    </div>
+   
+  </footer>
+  <script src="js/script.js"></script>
+  
+</body>
+</html>

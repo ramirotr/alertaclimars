@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Previsão do Tempo - Alerta Clima RS</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <div class="config-menu">
+    <button id="config-btn">⚙️</button>
+    <div class="config-panel" id="config-panel">
+      <label>
+        <input type="checkbox" id="toggle-dark-mode">
+        Modo Escuro
+      </label>
+      <label>
+        <input type="checkbox" id="toggle-font">
+        Texto Maior
+      </label>
+      <label>
+        <input type="checkbox" id="toggle-contrast">
+        Alto Contraste
+      </label>
+    </div>
+  </div>
+  
+
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <img src="assets/CLIMA__1_-removebg-preview (1).png" alt="Logo Alerta Clima RS">
+    </div>
+    <img src="" alt="">
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="previsao.html" class="active">Previsão</a></li>
+        <li><a href="guaiba.html">Guaíba</a></li>
+        <li><a href="noticias.php">Notícias</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+    <style>
+      #previsao-container {
+        position: relative;
+        margin: 20px auto;
+        text-align: center;
+        font-family: Arial, sans-serif;
+        color: #333;
+        display: block;
+        width: 400px;
+        height: 450px;
+        background-color: #003366;
+        padding: 20px;
+        border-radius: 8px;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        background: #eef;
+      }
+      h1{
+        color: #333;
+      }
+      h2{
+        text-align: center;
+      }
+      #previsao {
+        margin-top: 20px;
+        background: #fff;
+        padding: 15px;
+        border-radius: 8px
+      }
+      input, button {
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 10px;
+      }
+    </style>
+
+  <main class="container">
+    <h1>Previsão do Tempo</h1>
+    <p>Confira abaixo a previsão atualizada para a sua cidade.</p>
+ 
+    <div id="previsao-container">
+      <!-- Campo de busca manual -->
+      <form onsubmit="event.preventDefault(); buscarPrevisaoDoTempo(document.getElementById('cidade').value);">
+        <input type="text" id="cidade" placeholder="Digite a cidade" />
+        <button type="submit">Buscar</button>
+      </form>
+
+      <!-- Resultado da previsão -->
+      <div id="previsao">Carregando previsão com base no seu IP...</div>
+
+      <!-- Importa o script externo -->
+      <script src="clima.js"></script>
+    </body>
+  </div>
+   
+  </main>
+
+  <section class="cards container">
+    <div class="card">
+      <h2>🌊 Nível do Guaíba 🌊</h2>
+      <p>Veja um gráfico com a média de altitude do rio Guaíba atualizado mensalmente.</p>
+      <a class="btn" href="guaiba.html">Ver mais</a>
+    </div>
+    <div class="card">
+      <h2>📰 Notícias 📰</h2>
+      <p>Veja notícias atualizadas sobre o mundo ao nosso redor.</p>
+      <a class="btn" href="noticias.php">Ver mais</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>Projeto Técnico - Alerta Clima RS 2025 | Desenvolvido por <a class="githublink" href="https://github.com/pruvinelli123" target="_blank">Pedro Pruvinelli</a> , <a class="githublink" href="https://github.com/ramirotr" target="_blank">Ramiro Rockenbach</a> , <a class="githublink" href="https://github.com/rodrigin" target="_blank">Rodrigo Leonardis</a> e <a class="githublink" href="https://github.com/Plump07" target="_blank">Raphael Plump</a></p>
+  </footer>
+
+  <script src="previsao.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

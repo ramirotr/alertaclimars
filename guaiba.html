@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nível do Guaíba - Alerta Clima RS</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+ 
+  <header>
+    
+    <div class="header-container">
+      <div class="logo">
+        <img src="assets/CLIMA__1_-removebg-preview (1).png" alt="Logo Alerta Clima RS">
+      </div>
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="previsao.html">Previsão</a></li>
+          <li><a href="guaiba.html" class="active">Guaíba</a></li>
+          <li><a href="noticias.php">Notícias</a></li>
+        </ul>
+      </nav>
+    </div>
+
+  </header>
+ 
+  <main class="container">
+    <div class="config-menu">
+      <button id="config-btn">⚙️</button>
+      <div class="config-panel" id="config-panel">
+        <label>
+          <input type="checkbox" id="toggle-dark-mode">
+          Modo Escuro
+        </label>
+        <label>
+          <input type="checkbox" id="toggle-font">
+          Texto Maior
+        </label>
+        <label>
+          <input type="checkbox" id="toggle-contrast">
+          Alto Contraste
+        </label>
+      </div>
+    </div>
+
+    <h1>Nível do Rio Guaíba</h1>
+    <p>Acompanhe aqui o monitoramento do Guaíba em Porto Alegre.</p>
+ 
+    <!-- Botões de alternância -->
+    <div class="grafico-btn" style="text-align: center; margin: 20px; ">
+      <button id="btnAnual" class="btn">Gráfico Anual</button>
+      <button id="btnMensal2020" class="btn">2020</button>
+      <button id="btnMensal2021" class="btn">2021</button>
+      <button id="btnMensal2022" class="btn">2022</button>
+      <button id="btnMensal2023" class="btn">2023</button>
+      <button id="btnMensal2024" class="btn">2024</button>
+      <button id="btnMensal2025" class="btn">2025</button>
+    </div>
+   
+ 
+    <!-- Gráficos -->
+    <canvas id="graficoGuaiba" width="600" height="300" style="margin: 40px auto; display: block;"></canvas>
+  </main>
+ 
+  <section class="cards container">
+    <div class="card">
+      <h2>🌤️ Previsão do Tempo 🌤️</h2>
+      <p>Confira a temperatura, vento e umidade atual da sua cidade.</p>
+      <a class="btn" href="previsao.html">Ver mais</a>
+    </div>
+    <div class="card">
+      <h2>📰 Notícias 📰</h2>
+      <p>Veja notícias atualizadas sobre o mundo ao nosso redor.</p>
+      <a class="btn" href="noticias.php">Ver mais</a>
+    </div>
+  </section>
+ 
+  <footer>
+    <p>Projeto Técnico - Alerta Clima RS 2025 | Desenvolvido por <a class="githublink" href="https://github.com/pruvinelli123" target="_blank">Pedro Pruvinelli</a> , <a class="githublink" href="https://github.com/ramirotr" target="_blank">Ramiro Rockenbach</a> , <a class="githublink" href="https://github.com/rodrigin" target="_blank">Rodrigo Leonardis</a> e <a class="githublink" href="https://github.com/Plump07" target="_blank">Raphael Plump</a></p>
+  </footer>
+ 
+  <!-- Script principal -->
+  <script>
+    let chart;
+   
+    const ctx = document.getElementById('graficoGuaiba').getContext('2d');
+   
+    function criaGrafico(labels, dados, corLinha, titulo) {
+      if (chart) chart.destroy();
+   
+      chart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: labels,
+          datasets: [{
+            label: 'Nível do Rio Guaíba (m)',
+            data: dados,
+            borderColor: corLinha,
+            backgroundColor: corLinha.replace('1)', '0.2)'),
+            borderWidth: 3,
+            pointBackgroundColor: corLinha,
+            tension: 0.3
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            title: {
+              display: true,
+              text: titulo
+            },
+            tooltip: {
+              callbacks: {
+                label: function(context) {
+                  return context.parsed.y + ' metros';
+                }
+              }
+            }
+          },
+          scales: {
+            y: {
+              beginAtZero: false,
+              title: {
+                display: true,
+                text: 'Metros'
+              }
+            },
+            x: {
+              title: {
+                display: true,
+                text: 'Mês'
+              }
+            }
+          }
+        }
+      });
+    }
+   
+    function carregarMensal(ano, cor) {
+      fetch(`http://localhost:80/alertaclimars/grafico_mensal_${ano}.php`)
+        .then(response => {
+          if (!response.ok) throw new Error('Erro no fetch');
+          return response.json();
+        })
+        .then(data => {
+          const labels = data.map(item => item.mes);
+          const valores = data.map(item => parseFloat(item.nivel_medio));
+          criaGrafico(labels, valores, cor, `Média Mensal em ${ano}`);
+        })
+        .catch(err => console.error(err));
+    }
+   
+    function carregarAnual() {
+      fetch('http://localhost:80/alertaclimars/grafico_guaiba.php')
+        .then(response => {
+          if (!response.ok) throw new Error('Erro no fetch');
+          return response.json();
+        })
+        .then(data => {
+          const labels = data.map(item => item.ano);
+          const valores = data.map(item => parseFloat(item.nivel_medio));
+          criaGrafico(labels, valores, 'rgba(54,162,235,1)', 'Nível Médio Anual do Guaíba');
+        })
+        .catch(err => console.error(err));
+    }
+   
+    document.getElementById('btnAnual').addEventListener('click', carregarAnual);
+    document.getElementById('btnMensal2020').addEventListener('click', () => carregarMensal(2020, 'rgba(255,159,64,1)'));
+    document.getElementById('btnMensal2021').addEventListener('click', () => carregarMensal(2021, 'rgba(153,102,255,1)'));
+    document.getElementById('btnMensal2022').addEventListener('click', () => carregarMensal(2022, 'rgba(255,205,86,1)'));
+    document.getElementById('btnMensal2023').addEventListener('click', () => carregarMensal(2023, 'rgba(75,192,192,1)'));
+    document.getElementById('btnMensal2024').addEventListener('click', () => carregarMensal(2024, 'rgba(255,99,132,1)'));
+    document.getElementById('btnMensal2025').addEventListener('click', () => carregarMensal(2025, 'rgba(54,162,235,1)'));
+   
+    carregarAnual();
+    </script>
+   
+   
+   <script src="js/script.js"></script>
+</body>
+</html>

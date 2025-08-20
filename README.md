@@ -1,2 +1,3 @@
 # alertaclimars
-Site informativo para rio-grandenses. Previsão do tempo, altitude do rio guaíba e notícias atualizadas em tempo real.
+Site geográfico com previsão do tempo, gráficos mensais de altitude do rio guaíba em Porto Alegre e notícias atualizadas diariamente.
+
