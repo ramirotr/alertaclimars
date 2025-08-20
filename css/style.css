@@ -1,0 +1,734 @@
+/* === ESTILO GERAL === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #b5ddff;
+  color: #222;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* === HEADER === */
+header {
+  background-color: #003366;
+  padding: 20px;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    color: transparent;
+}
+
+.logo img {
+  width: 500px; 
+  height: auto; 
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 36px; /* bastante espaço entre os botões */
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  margin: 30px auto 0 auto;
+  box-shadow: none;
+  width: fit-content;
+  color: transparent;
+}
+
+.menu li {
+  list-style: none;
+  background-color: transparent;
+}
+
+.menu li a {
+  display: block;
+  color: #fff;
+  background-color: #008FEA;
+  border-radius: 30px; /* bem redondinho */
+  padding: 10px 24px;  /* menor e mais compacto */
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.menu li a:hover,
+.menu li a.active {
+  background-color: #008FEA;
+  color: #fff;
+  transform: scale(1.08);
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:300&subset=latin-ext);
+
+body {
+-moz-osx-font-smoothing:grayscale;
+-ms-flex-direction:column;
+-webkit-box-direction:normal;
+-webkit-box-orient:vertical;
+-webkit-font-smoothing:antialiased;
+background:#f5f5f5;
+color:#777;
+display:flex;
+flex-direction:column;
+font-family:Montserrat, sans-serif;
+font-size: 1em;
+font-weight:300;
+margin:0;
+min-height:100vh;
+
+}
+
+h1 {
+	font-weight: 200;
+	font-size: 2.2rem;
+	color: #222;
+	text-align: center;
+}
+
+nav {
+	margin: 5px;
+	max-width: 1900px;
+	background: transparent;
+
+}
+
+nav::after {
+	display: block;
+	content: '';
+	clear: both;
+}
+
+nav ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+nav ul li {
+	float: left;
+	position: relative;
+}
+
+nav ul li a {
+	display: block;
+	color: rgba(255, 255, 255, .9);
+	text-decoration: none;
+	padding: 1rem 2rem;
+	border-top: 2px solid transparent;
+	border-bottom: 2px solid transparent;
+	transition: all .3s ease-in-out;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+	background: rgba(0, 0, 0, .15);
+}
+
+nav ul li a:focus {
+	color: white;
+}
+
+nav ul li ul li {
+	min-width: 190px;
+}
+
+nav ul li ul li a {
+	background: transparent;
+	color: #555;
+	border-bottom: 1px solid #DDE0E7;
+}
+
+nav ul li ul li a:hover,
+nav ul li ul li a:focus {
+	background: #eee;
+	color: #111;
+}
+
+
+
+/* === BANNER === */
+
+.banner .slides {
+  position: relative;
+  width: 100vw !important;
+  height: 300px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.banner .slides img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 300px;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  display: block;
+}
+
+.banner .slides img.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+
+/* === TÍTULOS PRINCIPAIS === */
+main h1 {
+  text-align: center;
+  font-size: 36px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  color: #003366;
+}
+
+main p {
+  text-align: center;
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 30px;
+}
+
+/* === CARDS === */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin: 40px auto;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.card {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  min-height: 230px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.card h2 {
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+}
+
+.card p {
+  margin-bottom: 15px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0077cc;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #005fa3;
+}
+
+/* === PREVISÃO DO TEMPO === */
+.weather-box {
+  background-color: #ffffff;
+  padding: 30px;
+  margin-top: 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.weather-box input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.weather-box button {
+  padding: 12px 24px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.weather-box button:hover {
+  background-color: #0056b3;
+}
+
+.weather-result {
+  margin-top: 30px;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.weather-result h3 {
+  font-size: 26px;
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.weather-result img {
+  width: 100px;
+  height: 100px;
+  margin: 10px 0;
+}
+
+/* === FOOTER === */
+footer {
+  background-color: #003366;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.9rem;
+  border-top: 3px solid #0077cc;
+}
+
+/* === RESPONSIVO === */
+@media (max-width: 768px) {
+  .header-container {
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 10px;
+    }
+    
+  }
+
+  
+  .banner img {
+    max-height: 250px;
+  }
+
+  .weather-box {
+    padding: 20px;
+  }
+
+  .weather-result {
+    font-size: 18px;
+  }
+
+  main h1 {
+    font-size: 28px;
+  }
+
+  main p {
+    font-size: 16px;
+  }
+}
+
+body, html {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+.news-section {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.news-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #003366;
+}
+
+.news-section .subtext {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  color: #555;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.news-card {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+  text-align: left;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.news-card h2 {
+  font-size: 1.3rem;
+  color: #0077cc;
+  margin-bottom: 10px;
+}
+
+.news-card p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.news-card .date {
+  display: block;
+  margin-top: 15px;
+  font-size: 0.85rem;
+  color: #777;
+}
+#noticias-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.noticia-card {
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.noticia-card:hover {
+  transform: translateY(-5px);
+}
+
+.noticia-card img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.conteudo-noticia {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.conteudo-noticia h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #003366;
+}
+
+.conteudo-noticia p {
+  flex-grow: 1;
+  font-size: 15px;
+  color: #444;
+}
+
+.conteudo-noticia a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  align-self: flex-start;
+}
+
+.conteudo-noticia a:hover {
+  text-decoration: underline;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .noticia-card {
+    flex-direction: column;
+  }
+
+  .noticia-card img {
+    width: 100%;
+    height: auto;
+  }
+}
+.grafico-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  max-height: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 20px auto;
+}
+
+.slides img.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.carousel button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  font-size: 30px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.carousel .prev {
+  left: 20px;
+}
+
+.carousel .next {
+  right: 20px;
+}
+
+.carousel button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+/* === MENU DE CONFIGURAÇÕES === */
+.config-menu {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
+#config-btn {
+  font-size: 28px;     /* aumenta o tamanho do ícone */
+  padding: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;         /* cor do ícone no header escuro */
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+#config-btn:hover {
+  opacity: 0.8;
+}
+
+.large-font #config-btn {
+  font-size: 1.5em !important; /* ou ajuste para o tamanho ideal */
+}
+
+
+.config-panel {
+  position: absolute;
+  top: 55px; /* Aumenta para descer o menu */
+  right: 20px;
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: none;
+  z-index: 10;
+  min-width: 160px;
+}
+
+.large-font .config-panel {
+  top: 65px; /* Quando o texto maior estiver ativo, desce um pouco mais */
+}
+
+
+
+.config-panel label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Corrige fundo e borda do botão de configurações no modo escuro */
+.dark-mode #config-btn {
+  background-color: #555 !important;
+  border: none;
+  outline: none;
+}
+
+
+/* Modo escuro */
+.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+.dark-mode header,
+.dark-mode footer {
+  background-color: #222;
+  border-color: #444;
+}
+
+.dark-mode .card,
+.dark-mode .weather-box,
+.dark-mode .grafico-container,
+.dark-mode .news-card,
+.dark-mode .noticia-card {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+}
+
+.dark-mode .config-panel {
+  background-color: #f9f9f9;
+  color: #222;
+}
+
+.dark-mode .config-panel label {
+  color: #222;
+}
+
+.dark-mode #config-btn {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  background-image: none !important;
+}
+.dark-mode .config-panel {
+  background-color: #1f1f1f;
+  color: #fff;
+}
+
+.dark-mode .config-panel label {
+  color: #fff;
+}
+
+.dark-mode #previsao {
+  background-color: #007bff;
+}
+
+
+
+/* Acessibilidade */
+.high-contrast {
+  filter: contrast(1.5) brightness(1.2);
+}
+
+.large-font {
+  --base-font-size: 20px;
+  --heading-font-size: 3rem;
+  --subheading-font-size: 2.2rem;
+  --paragraph-line-height: 2em;
+}
+
+.large-font * {
+  font-size: var(--base-font-size) !important;
+  line-height: var(--paragraph-line-height) !important;
+}
+
+.large-font h1 {
+  font-size: var(--heading-font-size) !important;
+}
+
+.large-font h2 {
+  font-size: var(--subheading-font-size) !important;
+}
+
+.large-font h3 {
+  font-size: 1.7rem !important;
+}
+
+.dark-mode main h1 {
+  color: #fff !important;
+}
+
+.dark-mode main p {
+  color: #fff !important;
+}
+
+/* Transição suave entre temas */
+body,
+header,
+footer,
+.card,
+.config-panel,
+main,
+.banner,
+.news-card,
+.noticia-card,
+.grafico-container {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.githublink {
+  text-decoration: none;
+  color: white;
+  text-decoration: underline;
+}
+
+
+
+
+
+
